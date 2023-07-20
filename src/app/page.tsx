@@ -1,11 +1,49 @@
+import { Home as HomeIcon, Search, Library } from "lucide-react";
+
 export default function Home() {
-  return(
-   <div className="h-screen flex flex-col">
-    <div className="flex flex-1">
-      <aside className="w-72 bg-zinc-950 p-6">SideBar</aside>
-      <main className="flex-1 p-6">Main</main>
+  return (
+    <div className="h-screen flex flex-col">
+      <div className="flex flex-1">
+        <aside className="w-72 bg-zinc-950 p-6">
+          <div className="flex items-center gap-2 mb-6">
+            <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+         
+          </div>
+          <nav className="space-y-5">
+            <a className="flex gap-3 items-center text-sm font-semibold text-zinc-200" href="">
+              <HomeIcon />
+              Home
+            </a>
+            <a className="flex gap-3 items-center text-sm font-semibold text-zinc-200" href="">
+              <Search />
+              Search
+            </a>
+            <a className="flex gap-3 items-center text-sm font-semibold text-zinc-200" href="">
+              <Library />
+              Your Library
+            </a>
+          </nav>
+
+          <nav className="mt-6 pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a className="text-sm text-zinc-400 hover:text-zinc-100" href="">Chill Vibes</a>
+            <a className="text-sm text-zinc-400 hover:text-zinc-100" href="">Indie Roadtrip</a>
+            <a className="text-sm text-zinc-400 hover:text-zinc-100" href="">Acoustic Bliss</a>
+            <a className="text-sm text-zinc-400 hover:text-zinc-100" href="">Summer Beats</a>
+            <a className="text-sm text-zinc-400 hover:text-zinc-100" href="">Throwback Jams</a>
+            <a className="text-sm text-zinc-400 hover:text-zinc-100" href="">Late Night Jazz</a>
+            <a className="text-sm text-zinc-400 hover:text-zinc-100" href="">Electronic Dreams</a>
+            <a className="text-sm text-zinc-400 hover:text-zinc-100" href="">Mood Booster Mix</a>
+            <a className="text-sm text-zinc-400 hover:text-zinc-100" href="">R&B Slow Jams</a>
+            <a className="text-sm text-zinc-400 hover:text-zinc-100" href="">Workout Motivation</a>
+          </nav>
+        </aside>
+        <main className="flex-1 p-6">Main</main>
+      </div>
+      <footer className="bg-zinc-800 border-t border-zinc-700 p-6">
+        Footer
+      </footer>
     </div>
-    <footer className="bg-zinc-800 border-t border-zinc-700 p-6">Footer</footer>
-   </div>
-  )
+  );
 }
